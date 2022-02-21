@@ -8,10 +8,11 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "lint": "eslint './**/*.{js,ts,tsx}'",
-    "lint:fix": "eslint --fix './**/*.{js,ts,tsx}'",
-    "format": "prettier --check .",
-    "format:fix": "prettier --write ."
+    "lint": "eslint './**/*.{ts,tsx}'",
+    "lint:fix": "eslint --fix './**/*.{ts,tsx}'",
+    "format": "prettier --check './**/*.{ts,tsx}'",
+    "format:fix": "prettier --write'./**/*.{ts,tsx}'",
+    "prepare": "husky install"
   },
   "dependencies": {
     "expo": "~44.0.0",
@@ -41,9 +42,9 @@
   },
   "private": true,
   "lint-staged": {
-    "./**/*.{js,ts,tsx}": [
-      "eslint --fix './**/*.{js,ts,tsx}'",
-      "prettier --write ."
+    "./**/*.{ts,tsx}": [
+      "eslint --fix './**/*.{ts,tsx}'",
+      "prettier --write './**/*.{ts,tsx}'"
     ]
   },
   "husky": {
