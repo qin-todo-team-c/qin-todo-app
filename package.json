@@ -13,7 +13,7 @@
     "format": "prettier --check './**/*.{ts,tsx}'",
     "format:fix": "prettier --write'./**/*.{ts,tsx}'",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
     "prepare": "husky install"
   },
   "dependencies": {
