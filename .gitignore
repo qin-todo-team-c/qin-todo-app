@@ -12,3 +12,14 @@ web-build/
 
 # macOS
 .DS_Store
+
+# testing
+/coverage
+
+# vscode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.recommended.json
+
+# cache
+.eslintcache

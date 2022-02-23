@@ -4,3 +4,4 @@
 .expo-shared
 .eslintrc.js
 babel.config.js
+.storybook
