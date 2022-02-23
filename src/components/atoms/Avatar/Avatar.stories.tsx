@@ -10,7 +10,7 @@ export const Image: ComponentStoryObj<typeof Avatar> = {
   args: {
     size: 'large',
     source: {
-      uri: 'https://avatars.dicebear.com/v2/male/e828b4072fdb3dc6312b67977f0b247a.svg',
+      uri: 'https://avatars.dicebear.com/v2/male/e828b4072fdb3dc6312b67977f0b247a.png',
     },
   },
 };
