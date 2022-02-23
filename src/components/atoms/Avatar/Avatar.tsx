@@ -1,21 +1,20 @@
-import styled from 'styled-components';
+import { ImageSourcePropType } from 'react-native';
+import styled from 'styled-components/native';
 
 type Size = 'small' | 'medium' | 'large';
 
 interface AvatarProps {
   size?: Size;
-  src?: string;
-  alt?: string;
+  source?: ImageSourcePropType;
 }
 
 const sizes: Record<Size, string> = {
-  small: '2rem',
-  medium: '3rem',
-  large: '4rem',
+  small: '16px',
+  medium: '24px',
+  large: '32px',
 };
 
-const AvatarComponent = styled.img<Pick<AvatarProps, 'size'>>`
-  display: inline-block;
+const AvatarComponent = styled.Image<Pick<AvatarProps, 'size'>>`
   width: ${(props) => sizes[props.size as Size]};
   height: ${(props) => sizes[props.size as Size]};
   border-radius: 9999px;
@@ -25,8 +24,9 @@ const AvatarComponent = styled.img<Pick<AvatarProps, 'size'>>`
 
 export const Avatar: React.VFC<AvatarProps> = ({
   size = 'large',
-  src = 'https://avatars.dicebear.com/v2/male/e828b4072fdb3dc6312b67977f0b247a.svg',
-  alt = '',
+  source = {
+    uri: 'https://avatars.dicebear.com/v2/male/e828b4072fdb3dc6312b67977f0b247a.png',
+  },
 }) => {
-  return <AvatarComponent src={src} alt={alt} size={size} />;
+  return <AvatarComponent source={source} size={size} />;
 };
