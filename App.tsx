@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Avatar } from './src/components/atoms/Avatar';
+import { Title } from './src/components/atoms/Title';
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
         <Text>Open up App.tsx to start working on your app!</Text>
         <Avatar />
         <StatusBar style="auto" />
+        <Title when="today" />
       </View>
     </>
   );
