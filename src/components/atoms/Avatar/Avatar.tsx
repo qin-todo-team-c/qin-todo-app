@@ -9,9 +9,9 @@ interface AvatarProps {
 }
 
 const sizes: Record<Size, string> = {
-  small: '16px',
-  medium: '24px',
-  large: '32px',
+  small: '28px',
+  medium: '36px',
+  large: '48px',
 };
 
 const AvatarComponent = styled.Image<Pick<AvatarProps, 'size'>>`
@@ -20,10 +20,18 @@ const AvatarComponent = styled.Image<Pick<AvatarProps, 'size'>>`
   border-radius: 9999px;
   overflow: hidden;
   background-color: gray;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-top-color: #fbdfa1;
+  border-right-color: #defcb2;
+  border-bottom-color: #b8eef8;
+  border-left-color: #f4bacf;
 `;
 
 export const Avatar: React.VFC<AvatarProps> = ({
-  size = 'large',
+  size = 'medium',
   source = {
     uri: 'https://avatars.dicebear.com/v2/male/e828b4072fdb3dc6312b67977f0b247a.png',
   },
