@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Avatar } from './src/components/atoms/Avatar';
+import { FirstInput } from './src/components/atoms/Input';
+import { AtmText } from './src/components/atoms/Text';
 import { Title } from './src/components/atoms/Title';
 
 export default function App() {
@@ -11,6 +13,8 @@ export default function App() {
         <Avatar />
         <StatusBar style="auto" />
         <Title when="today" />
+        <FirstInput />
+        <AtmText>Hello World</AtmText>
       </View>
     </>
   );
